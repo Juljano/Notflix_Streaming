@@ -5,25 +5,146 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".EpisodeDetailsActivity">
-
 
     <!-- Toolbar mit Zurück-Button -->
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+        android:id="@+id/toolbarEpisodeDetails"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
+        android:background="#FF0000"
         android:elevation="4dp"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        app:navigationIcon="?android:attr/homeAsUpIndicator"/>
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:navigationIcon="?android:attr/homeAsUpIndicator"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
+        android:id="@+id/relativelayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="477dp"
+        android:layout_below="@+id/toolbarEpisodeDetails">
+
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:text="Star Trek: Discovery "
+            android:textColor="@color/black"
+            android:textSize="50sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_below="@+id/textViewTitle">
+
+
+            <TextView
+                android:id="@+id/textviewInGerman"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="In Deutsch verfügbar"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="250dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="20sp"/>
+
+
+        </LinearLayout>
+
+
+
+        <TextView
+            android:id="@+id/textViewEpisode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewTitle"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:text="Leuchtfeuer The Vulcan Hello"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/textViewDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewEpisode"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
+            android:text="Am Rande des Föderationsraumes entdeckt die Crew der USS Shenzhou ein unbekanntes Objekt, dass sich als Schiff der Klingonen entpuppt. Als der erste Offizier Michael Burnham bei einer Untersuchung einen sie angreifenden Klingonen tötet, ruft dies den Revoluzzer T’Kuvma und seinen Verbündeten, den Außenseiter Voq, auf den Plan, die aus Angst vor einer kulturellen Vernichtung durch die expandierende Föderation die 24 Häuser ihrer Heimatwelt wiedervereinigen wollen, um in den Krieg zu ziehen. Burnham sieht es als notwenidig an, die Klingonen sofort militärisch in ihre Schranken zu weisen, was aber dem Föderationsideal entgegenlaufen würde. (Text: Fernsehserien.de)"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_below="@+id/textViewDescription"
+            android:layout_marginTop="20dp">
+
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#FF0000"
+                android:text="VOE" />
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="0dp">
+            </View>
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#FF0000"
+                android:text="DoodStream" />
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="0dp">
+            </View>
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#FF0000"
+
+                android:text="Vidoza" />
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="0dp">
+            </View>
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#FF0000"
+                android:text="Streamtape" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="0dp">
+            </View>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
 
 </RelativeLayout>

@@ -6,23 +6,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
-import androidx.fragment.app.FragmentActivity;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.bumptech.glide.Glide;
-
-import org.w3c.dom.Text;
-
+import java.util.ArrayList;
 import java.util.List;
 public class SeriesAdapter extends RecyclerView.Adapter<SeriesAdapter.ViewHolder> {
 
     private final List<SeriesModel> seriesModelList;
     private final Context context;
+
 
     public SeriesAdapter(List<SeriesModel> seriesModelList, Context context) {
         this.seriesModelList = seriesModelList;
@@ -54,9 +48,10 @@ public class SeriesAdapter extends RecyclerView.Adapter<SeriesAdapter.ViewHolder
             public void onClick(View v) {
 
                 Intent intent = new Intent(context,EpisodeDetailsActivity.class);
+                intent.putExtra("Episode-URL", seriesModel.getAllEpisodes());
                 context.startActivity(intent);
 
-                Toast.makeText(context.getApplicationContext(), String.valueOf(seriesModel.getNumberofSeasons()), Toast.LENGTH_LONG).show();
+
             }
         });
 
@@ -89,4 +84,5 @@ public class SeriesAdapter extends RecyclerView.Adapter<SeriesAdapter.ViewHolder
 
         }
     }
+
 }

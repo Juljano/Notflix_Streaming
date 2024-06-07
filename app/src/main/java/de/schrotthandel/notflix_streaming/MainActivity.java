@@ -26,7 +26,8 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String getStreamLink = "https://s.to/serie/stream/halo/";
+
+                String getStreamLink = "https://s.to/serie/stream/rick-and-morty";
                // String url = editText.getText().toString();
                 if (getStreamLink.startsWith("https://")) {
                     Parsing parsing = new Parsing(getApplicationContext(), MainActivity.this);
